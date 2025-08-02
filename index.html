@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maša Brna – Fashion Design Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Maša Brna</h1>
+    <p id="about-short">
+      Creative fashion professional with a master’s degree and international experience, including a finalist spot at the 2020 International Young Designers Contest in Kyiv. Skilled in multifunctional design, sustainable materials, and trend insight.
+      <button id="readMoreBtn" aria-expanded="false" aria-controls="about-more">Read more</button>
+    </p>
+    <p id="about-more" hidden>
+      I’m driven by themes of multifunctionality, survival, and the evolving relationship between humans and nature—expressed through garments that merge practicality with emotional depth. My work has been showcased internationally, and I currently work on a UNESCO project in Porto.
+    </p>
+  </header>
+
+  <main>
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3>Exploring Ice Age</h3>
+        <div class="project-images">
+          <!-- Upload your images for Exploring Ice Age here -->
+          <p><em>Images coming soon.</em></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Contemporary Nomads</h3>
+        <div class="project-images">
+          <!-- Upload your images for Contemporary Nomads here -->
+          <p><em>Images coming soon.</em></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>São Bartolomeu</h3>
+        <div class="project-images">
+          <!-- Upload your images for São Bartolomeu here -->
+          <p><em>Images coming soon.</em></p>
+        </div>
+        <p class="project-description">
+          As part of an old Portuguese tradition of crafting paper garments specific to the Foz area in Porto, I created a paper replica of the tracksuit worn by Rosa Mota—one of Portugal’s greatest champions—when she won gold at the 1988 Seoul Olympic Games.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p><a href="https://www.instagram.com/masabrna" target="_blank" rel="noopener noreferrer">Instagram @masabrna</a></p>
+  </footer>
+
+  <script>
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const aboutMore = document.getElementById('about-more');
+
+    readMoreBtn.addEventListener('click', () => {
+      const expanded = readMoreBtn.getAttribute('aria-expanded') === 'true';
+      readMoreBtn.setAttribute('aria-expanded', !expanded);
+      aboutMore.hidden = expanded;
+      readMoreBtn.textContent = expanded ? 'Read more' : 'Read less';
+    });
+  </script>
+</body>
+</html>
